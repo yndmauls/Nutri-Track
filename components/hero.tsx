@@ -70,7 +70,7 @@ export function Hero() {
       >
         Check Nutrisi.
         <br />
-        Tiggal <span className="text-primary">foto</span> beres.
+        Tinggal <span className="text-primary">foto</span> beres.
       </motion.h1>
 
       <motion.p
