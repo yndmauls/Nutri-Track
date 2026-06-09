@@ -116,7 +116,7 @@ export function Hero() {
           animate={{ y: [0, -16, 0] }}
           transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
         >
-          <PhoneMockup />
+         <PhoneMockup />
         </motion.div>
 
         <FloatingBadge className="-left-6 top-10 sm:-left-24" delay={0.8}>
