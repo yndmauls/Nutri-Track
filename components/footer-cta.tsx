@@ -1,7 +1,15 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Apple, Play, Leaf } from "lucide-react"
+import { Apple, Play, Leaf, Smartphone } from "lucide-react"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 export function FooterCta() {
   return (
@@ -25,26 +33,91 @@ export function FooterCta() {
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <a
-            href="#"
-            className="group inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 font-semibold text-primary-foreground transition-transform hover:scale-105"
-          >
-            <Apple className="h-5 w-5" />
-            <span className="text-left leading-none">
-              <span className="block text-[10px] font-normal opacity-70">Download di</span>
-              App Store
-            </span>
-          </a>
-          <a
-            href="#"
-            className="group inline-flex items-center gap-3 rounded-full border border-white/15 px-7 py-4 font-semibold text-white transition-colors hover:bg-white/5"
-          >
-            <Play className="h-5 w-5" />
-            <span className="text-left leading-none">
-              <span className="block text-[10px] font-normal opacity-50">Download di</span>
-              Google Play
-            </span>
-          </a>
+          
+          {/* Tombol App Store dengan Popup QR Code */}
+          <Dialog>
+            <DialogTrigger className="group inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 font-semibold text-primary-foreground transition-transform hover:scale-105">
+                <Apple className="h-5 w-5" />
+                <span className="text-left leading-none">
+                  <span className="block text-[10px] font-normal opacity-70">Download di</span>
+                  App Store
+                </span>
+            </DialogTrigger>
+            <DialogContent className="border-white/10 bg-black/90 p-8 backdrop-blur-2xl sm:max-w-md">
+              <div className="flex flex-col items-center justify-center space-y-6 text-center">
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ type: "spring", bounce: 0.5 }}
+                  className="flex h-20 w-20 items-center justify-center rounded-full border border-primary/30 bg-primary/10"
+                >
+                  <Smartphone className="h-10 w-10 text-primary" />
+                </motion.div>
+                <DialogHeader>
+                  <DialogTitle className="text-center text-2xl font-bold text-white">
+                    Scan buat Install (iOS)
+                  </DialogTitle>
+                  <DialogDescription className="text-center text-white/60">
+                    Arahkan kamera iPhone anda ke QR Code di bawah ini untuk mulai menggunakan Nutri-Track.
+                  </DialogDescription>
+                </DialogHeader>
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  className="flex h-48 w-48 items-center justify-center rounded-2xl bg-white p-3 shadow-[0_0_30px_rgba(34,197,94,0.3)]"
+                >
+                  <img 
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://nutri-track.vercel.app/login"
+                    alt="QR Code iOS" 
+                    className="rounded-xl"
+                  />
+                </motion.div>
+                <p className="pt-2 text-xs text-white/40">Membutuhkan iOS 14.0 atau lebih baru</p>
+              </div>
+            </DialogContent>
+          </Dialog>
+
+          {/* Tombol Google Play dengan Popup QR Code */}
+          <Dialog>
+            <DialogTrigger className="group inline-flex items-center gap-3 rounded-full border border-white/15 px-7 py-4 font-semibold text-white transition-colors hover:bg-white/5">
+                <Play className="h-5 w-5" />
+                <span className="text-left leading-none">
+                  <span className="block text-[10px] font-normal opacity-50">Download di</span>
+                  Google Play
+                </span>
+            </DialogTrigger>
+            <DialogContent className="border-white/10 bg-black/90 p-8 backdrop-blur-2xl sm:max-w-md">
+              <div className="flex flex-col items-center justify-center space-y-6 text-center">
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ type: "spring", bounce: 0.5 }}
+                  className="flex h-20 w-20 items-center justify-center rounded-full border border-primary/30 bg-primary/10"
+                >
+                  <Smartphone className="h-10 w-10 text-primary" />
+                </motion.div>
+                <DialogHeader>
+                  <DialogTitle className="text-center text-2xl font-bold text-white">
+                    Scan buat Install (Android)
+                  </DialogTitle>
+                  <DialogDescription className="text-center text-white/60">
+                    Arahkan kamera HP anda ke QR Code di bawah ini untuk mulai menggunakan Nutri-Track.
+                  </DialogDescription>
+                </DialogHeader>
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  className="flex h-48 w-48 items-center justify-center rounded-2xl bg-white p-3 shadow-[0_0_30px_rgba(34,197,94,0.3)]"
+                >
+                  <img 
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://nutri-track.vercel.app/login"
+                    alt="QR Code Android" 
+                    className="rounded-xl"
+                  />
+                </motion.div>
+                <p className="pt-2 text-xs text-white/40">Membutuhkan Android 10 atau lebih baru</p>
+              </div>
+            </DialogContent>
+          </Dialog>
+
         </div>
       </motion.div>
 
