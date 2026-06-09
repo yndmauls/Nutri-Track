@@ -72,7 +72,7 @@ export function FooterCta() {
                     className="block"
                   >
                   <img 
-                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fwww.figma.com%2Fmake%2Ft3ZJGMwUa8ZN19pObzkMUO%2FNutriTrack%3Ffullscreen%3D1%26t%3DVWqbnjqH4lcl8OXz-1%26code-node-id%3D0-9"
+                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.figma.com/make/t3ZJGMwUa8ZN19pObzkMUO/NutriTrack?fullscreen=1&t=VWqbnjqH4lcl8OXz-1&code-node-id=0-9"
                   alt="QR Code IOS" 
                   className="rounded-xl"
            />
@@ -121,8 +121,7 @@ export function FooterCta() {
     className="block"
   >
     <img 
-      src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fwww.figma.com%2Fmake%2Ft3ZJGMwUa8ZN19pObzkMUO%2FNutriTrack%3Ffullscreen%3D1%26t%3DVWqbnjqH4lcl8OXz-1%26code-node-id%3D0-9"
-      alt="QR Code Android" 
+      src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.figma.com/make/t3ZJGMwUa8ZN19pObzkMUO/NutriTrack?fullscreen=1&t=VWqbnjqH4lcl8OXz-1&code-node-id=0-9"
       className="rounded-xl"
     />
   </a>
