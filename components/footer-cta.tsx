@@ -65,13 +65,20 @@ export function FooterCta() {
                   whileHover={{ scale: 1.05 }}
                   className="flex h-48 w-48 items-center justify-center rounded-2xl bg-white p-3 shadow-[0_0_30px_rgba(34,197,94,0.3)]"
                 >
+                  <a 
+                   href="https://www.figma.com/make/t3ZJGMwUa8ZN19pObzkMUO/NutriTrack?fullscreen=1&t=VWqbnjqH4lcl8OXz-1&code-node-id=0-9" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
                   <img 
-                    src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://nutri-track.vercel.app/login"
-                    alt="QR Code iOS" 
-                    className="rounded-xl"
-                  />
-                </motion.div>
-                <p className="pt-2 text-xs text-white/40">Membutuhkan iOS 14.0 atau lebih baru</p>
+                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fwww.figma.com%2Fmake%2Ft3ZJGMwUa8ZN19pObzkMUO%2FNutriTrack%3Ffullscreen%3D1%26t%3DVWqbnjqH4lcl8OXz-1%26code-node-id%3D0-9"
+                  alt="QR Code IOS" 
+                  className="rounded-xl"
+           />
+        </a>
+        </motion.div>
+          <p className="pt-2 text-xs text-white/40 italic">Klik QR Code atau scan untuk menuju aplikasi</p>
               </div>
             </DialogContent>
           </Dialog>
@@ -107,13 +114,20 @@ export function FooterCta() {
                   whileHover={{ scale: 1.05 }}
                   className="flex h-48 w-48 items-center justify-center rounded-2xl bg-white p-3 shadow-[0_0_30px_rgba(34,197,94,0.3)]"
                 >
-                  <img 
-                    src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://nutri-track.vercel.app/login"
-                    alt="QR Code Android" 
-                    className="rounded-xl"
-                  />
-                </motion.div>
-                <p className="pt-2 text-xs text-white/40">Membutuhkan Android 10 atau lebih baru</p>
+                 <a 
+    href="https://www.figma.com/make/t3ZJGMwUa8ZN19pObzkMUO/NutriTrack?fullscreen=1&t=VWqbnjqH4lcl8OXz-1&code-node-id=0-9" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="block"
+  >
+    <img 
+      src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fwww.figma.com%2Fmake%2Ft3ZJGMwUa8ZN19pObzkMUO%2FNutriTrack%3Ffullscreen%3D1%26t%3DVWqbnjqH4lcl8OXz-1%26code-node-id%3D0-9"
+      alt="QR Code Android" 
+      className="rounded-xl"
+    />
+  </a>
+</motion.div>
+<p className="pt-2 text-xs text-white/40 italic">Klik QR Code atau scan untuk menuju Aplikasi</p>
               </div>
             </DialogContent>
           </Dialog>
